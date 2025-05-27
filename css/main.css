@@ -15,10 +15,129 @@ body {
   line-height: 1.4;
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
 
+h1, h2, h3{
+  font-family: anton;
+}
 
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
 
+#logo{
+  width: 160px;
+}
 
+header .wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+header ul{
+  list-style: none;
+  display: flex;
+}
 
+header nav a{
+  display: inline-block;
+  background-color: #f54f95;
+  color: white;
+  padding: .75em 1.25em;
+  text-decoration: none;
+  border: 1px solid #f54f95;
+  margin-left: 1em;
+}
 
+header nav a:hover, header nav a:focus{
+  background-color: white;
+  color: #f54f95;
+}
+
+#hero{
+  height: 60vh;
+  background-color: #f54f95; /* just in case the bg img doesn't load */
+  background-image: url(../images/hero-donuts.jpg);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section{
+  padding-top: 4em 0;
+}
+
+.product-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+.product-card{
+  background-color: #c78e62;
+  border-radius: 14px;
+  text-align: center;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 1.25em;
+}
+
+.product-card p{
+  margin: .5em 0;
+}
+
+.price{
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+button{
+  display: inline-block;
+  background-color: white;
+  color: #f54f95;
+  font-size: 1.125em;
+  border: none;
+  border-radius: 20px;
+  padding: .5em 1.5em;
+  cursor: pointer;
+  margin-top: auto; /* forces elements to go to the bottom */
+}
+
+button:hover, button:focus{
+  background-color: #f54f95;
+  color: white;
+}
+
+footer{
+  background-color: #f54f95;
+  text-align: center;
+  padding: .5em 0;
+  color: white;
+}
+
+/* mobile version */
+@media (min-width: 38em){
+  .product-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* tablet version */
+@media (min-width: 68em){
+  .product-container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
